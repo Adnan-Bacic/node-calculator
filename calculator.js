@@ -14,7 +14,6 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.get("/", (req, res) => {
-    //res.send('test')
     res.sendFile(__dirname + "/index.html");
 })
 
@@ -31,7 +30,7 @@ app.post("/", (req, res) => {
 
 const PORT = 3000
 
-app.listen(PORT, (req, res) => {
+app.listen(PORT, () => {
     console.log(`server running on port ${PORT}`)
     console.log('http://localhost:3000')
 });
